@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use ResidualRescaledBF16 or CSP-BF16-IR in your research, please cite this work."
+title: "Breaking the 7-Bit BF16 Mantissa Ceiling: O(eps^{2/3}) Residual-Rescaled Spectral Volterra-Newton Refinement for Continuous-Time Generative Flows"
+type: software
+version: "1.0.0"
+date-released: "2026-11-25"
+license: MIT
+repository-code: "https://github.com/AndrewRober/ResidualRescaledBF16"
+authors:
+  - family-names: "Samy"
+    given-names: "Andrew Rober Fouad"
+    affiliation: "BytesGlue"
+    email: "andrew.rober@bytesglue.com"
+keywords:
+  - bfloat16
+  - iterative-refinement
+  - diffusion-models
+  - flow-matching
+  - spectral-collocation
+  - volterra-integral-equations
+  - tensor-cores

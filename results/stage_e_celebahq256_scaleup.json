@@ -1,0 +1,160 @@
+{
+  "stage": "Stage E \u2014 Zero-Shot 64x Spatial Scale-Up on google/ddpm-celebahq-256 (113.67M UNet, 256x256)",
+  "gpu": "NVIDIA GB10",
+  "pytorch_version": "2.11.0+cu130",
+  "model": "google/ddpm-celebahq-256 (113.67M UNet2DModel, strict=True, D=196,608)",
+  "num_seeds": 4,
+  "seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "strict_ieee_fp32_b1_step_ms": 146.01,
+  "strict_ieee_fp32_ddim250_b1_ms": 36502.34,
+  "strict_ieee_fp32_dpm100_b1_ms": 14600.94,
+  "peak_vram_mb": 10626.05,
+  "total_benchmark_wall_s": 773.18,
+  "methods": [
+    {
+      "method": "DDIM-100 (FP32)",
+      "b1_median_ms": 7544.6,
+      "psnr_mean_db": 38.914581298828125,
+      "psnr_std_db": 2.036252975463867,
+      "psnr_per_seed": [
+        39.63,
+        41.57,
+        35.94,
+        38.52
+      ],
+      "rel_l2_mean": 0.041364140808582306,
+      "max_abs_err_mean": 0.35025113821029663
+    },
+    {
+      "method": "DDIM-100 (BF16)",
+      "b1_median_ms": 5243.49,
+      "psnr_mean_db": 26.114978790283203,
+      "psnr_std_db": 1.4235306978225708,
+      "psnr_per_seed": [
+        27.32,
+        27.25,
+        23.8,
+        26.09
+      ],
+      "rel_l2_mean": 0.17762096226215363,
+      "max_abs_err_mean": 0.743903636932373
+    },
+    {
+      "method": "DPM-Solver-2-50 (FP32)",
+      "b1_median_ms": 3779.42,
+      "psnr_mean_db": 42.33909606933594,
+      "psnr_std_db": 3.9833574295043945,
+      "psnr_per_seed": [
+        42.21,
+        47.48,
+        36.33,
+        43.33
+      ],
+      "rel_l2_mean": 0.03014029748737812,
+      "max_abs_err_mean": 0.28793883323669434
+    },
+    {
+      "method": "DPM-Solver-2-50 (BF16)",
+      "b1_median_ms": 2624.88,
+      "psnr_mean_db": 25.573719024658203,
+      "psnr_std_db": 1.520633578300476,
+      "psnr_per_seed": [
+        26.31,
+        26.88,
+        22.99,
+        26.11
+      ],
+      "rel_l2_mean": 0.18962307274341583,
+      "max_abs_err_mean": 0.8389641046524048
+    },
+    {
+      "method": "DPM-Solver-2-100 (FP32)",
+      "b1_median_ms": 7527.08,
+      "psnr_mean_db": 46.19927978515625,
+      "psnr_std_db": 1.9972561597824097,
+      "psnr_per_seed": [
+        44.97,
+        49.22,
+        43.94,
+        46.67
+      ],
+      "rel_l2_mean": 0.01798335462808609,
+      "max_abs_err_mean": 0.15960416197776794
+    },
+    {
+      "method": "DPM-Solver-2-100 (BF16)",
+      "b1_median_ms": 5259.27,
+      "psnr_mean_db": 25.649900436401367,
+      "psnr_std_db": 1.194989800453186,
+      "psnr_per_seed": [
+        26.42,
+        26.63,
+        23.63,
+        25.92
+      ],
+      "rel_l2_mean": 0.18689769506454468,
+      "max_abs_err_mean": 0.813399076461792
+    },
+    {
+      "method": "ParaDiGMS-BF16 (S=96,W=8)",
+      "b1_median_ms": 15342.91,
+      "psnr_mean_db": 26.462322235107422,
+      "psnr_std_db": 1.359015941619873,
+      "psnr_per_seed": [
+        27.65,
+        27.57,
+        24.29,
+        26.34
+      ],
+      "rel_l2_mean": 0.17049278318881989,
+      "max_abs_err_mean": 0.6959627866744995
+    },
+    {
+      "method": "Log-SNR ParaFlow-BF16 (P=4,M=8)",
+      "b1_median_ms": 8569.19,
+      "psnr_mean_db": 25.601734161376953,
+      "psnr_std_db": 1.897546648979187,
+      "psnr_per_seed": [
+        26.74,
+        26.95,
+        22.33,
+        26.38
+      ],
+      "rel_l2_mean": 0.19030912220478058,
+      "max_abs_err_mean": 0.8691282272338867
+    },
+    {
+      "method": "Log-SNR CSP-BF16-IR (P=9,M=8,1-IR,TF32)",
+      "b1_median_ms": 16739.93,
+      "psnr_mean_db": 44.19888687133789,
+      "psnr_std_db": 1.1935749053955078,
+      "psnr_per_seed": [
+        44.87,
+        45.3,
+        42.2,
+        44.42
+      ],
+      "rel_l2_mean": 0.022099265828728676,
+      "max_abs_err_mean": 0.19610223174095154
+    },
+    {
+      "method": "Log-SNR CSP-BF16-IR (P=9,M=8,2-IR,IEEE)",
+      "b1_median_ms": 40323.3,
+      "psnr_mean_db": 50.09565353393555,
+      "psnr_std_db": 2.4638357162475586,
+      "psnr_per_seed": [
+        49.53,
+        54.25,
+        47.93,
+        48.67
+      ],
+      "rel_l2_mean": 0.011610174551606178,
+      "max_abs_err_mean": 0.1102546751499176
+    }
+  ]
+}

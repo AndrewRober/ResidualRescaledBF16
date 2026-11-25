@@ -1,0 +1,90 @@
+{
+  "stage": "Stage A \u2014 O(eps_bf16^{2/3}) Central-Difference JVP Perturbation V-Curve",
+  "gpu_device": "NVIDIA GB10",
+  "pytorch_version": "2.11.0+cu130",
+  "naive_unscaled_bf16_fd_rel_err": 162.15933,
+  "optimal_sigma_central": 0.125,
+  "optimal_fwd_rel_err": 0.141248,
+  "optimal_central_rel_err": 0.044611,
+  "peak_single_sweep_gain_x": 3.676,
+  "sweep": [
+    {
+      "log2_sigma": -8.0,
+      "sigma": 0.003906,
+      "fwd_o_eps_half_rel_err": 1.832739,
+      "central_o_eps_twothirds_rel_err": 1.075191,
+      "accuracy_gain_x": 1.705
+    },
+    {
+      "log2_sigma": -7.0,
+      "sigma": 0.007812,
+      "fwd_o_eps_half_rel_err": 0.952501,
+      "central_o_eps_twothirds_rel_err": 0.549942,
+      "accuracy_gain_x": 1.732
+    },
+    {
+      "log2_sigma": -6.0,
+      "sigma": 0.015625,
+      "fwd_o_eps_half_rel_err": 0.490071,
+      "central_o_eps_twothirds_rel_err": 0.277459,
+      "accuracy_gain_x": 1.766
+    },
+    {
+      "log2_sigma": -5.0,
+      "sigma": 0.03125,
+      "fwd_o_eps_half_rel_err": 0.255185,
+      "central_o_eps_twothirds_rel_err": 0.141102,
+      "accuracy_gain_x": 1.809
+    },
+    {
+      "log2_sigma": -4.0,
+      "sigma": 0.0625,
+      "fwd_o_eps_half_rel_err": 0.148736,
+      "central_o_eps_twothirds_rel_err": 0.072628,
+      "accuracy_gain_x": 2.048
+    },
+    {
+      "log2_sigma": -3.5,
+      "sigma": 0.088388,
+      "fwd_o_eps_half_rel_err": 0.141248,
+      "central_o_eps_twothirds_rel_err": 0.052768,
+      "accuracy_gain_x": 2.677
+    },
+    {
+      "log2_sigma": -3.0,
+      "sigma": 0.125,
+      "fwd_o_eps_half_rel_err": 0.164001,
+      "central_o_eps_twothirds_rel_err": 0.044611,
+      "accuracy_gain_x": 3.676
+    },
+    {
+      "log2_sigma": -2.333,
+      "sigma": 0.198471,
+      "fwd_o_eps_half_rel_err": 0.238275,
+      "central_o_eps_twothirds_rel_err": 0.064965,
+      "accuracy_gain_x": 3.668
+    },
+    {
+      "log2_sigma": -2.0,
+      "sigma": 0.25,
+      "fwd_o_eps_half_rel_err": 0.293178,
+      "central_o_eps_twothirds_rel_err": 0.093968,
+      "accuracy_gain_x": 3.12
+    },
+    {
+      "log2_sigma": -1.0,
+      "sigma": 0.5,
+      "fwd_o_eps_half_rel_err": 0.519745,
+      "central_o_eps_twothirds_rel_err": 0.28121,
+      "accuracy_gain_x": 1.848
+    },
+    {
+      "log2_sigma": 0.0,
+      "sigma": 1.0,
+      "fwd_o_eps_half_rel_err": 0.763462,
+      "central_o_eps_twothirds_rel_err": 0.588429,
+      "accuracy_gain_x": 1.297
+    }
+  ],
+  "wall_s": 1.01
+}

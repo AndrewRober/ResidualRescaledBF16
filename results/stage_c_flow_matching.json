@@ -1,0 +1,97 @@
+{
+  "stage": "Stage C \u2014 Trained Flow-Matching Generative Models (33.6M 8-Mode OT-CFM & 34.65M 2D Spatial Glyph DiT)",
+  "gpu_device": "NVIDIA GB10",
+  "pytorch_version": "2.11.0+cu130",
+  "ot_cfm_8mode_r128": {
+    "model_params_m": 33.6,
+    "train_wall_s": 2.59,
+    "oracle_holdout_swd": 0.03406,
+    "oracle_holdout_rbf_mmd": 0.08154,
+    "samplers": {
+      "GPU Euler-128 (FP32)": {
+        "b1_latency_ms": 94.61,
+        "pop256_latency_ms": 269.96,
+        "sliced_wasserstein_2": 0.07473,
+        "rbf_mmd": 0.156,
+        "traj_rel_l2_vs_rk4_512": 0.016056625287849853
+      },
+      "GPU Heun-128 (FP32)": {
+        "b1_latency_ms": 94.544,
+        "pop256_latency_ms": 270.598,
+        "sliced_wasserstein_2": 0.07389,
+        "rbf_mmd": 0.15832,
+        "traj_rel_l2_vs_rk4_512": 0.0025108999282957233
+      },
+      "GPU RK4-256 (FP32)": {
+        "b1_latency_ms": 189.359,
+        "pop256_latency_ms": 540.173,
+        "sliced_wasserstein_2": 0.07386,
+        "rbf_mmd": 0.15837,
+        "traj_rel_l2_vs_rk4_512": 8.075560451481216e-06
+      },
+      "GPU ParaDiGMS-128 (BF16, W=32)": {
+        "b1_latency_ms": 10.06,
+        "pop256_latency_ms": 210.734,
+        "sliced_wasserstein_2": 0.07401,
+        "rbf_mmd": 0.1583,
+        "traj_rel_l2_vs_rk4_512": 0.027358284858377963
+      },
+      "ParaFlow-BF16 (M=16, 5+0)": {
+        "b1_latency_ms": 3.389,
+        "pop256_latency_ms": 32.811,
+        "sliced_wasserstein_2": 0.07401,
+        "rbf_mmd": 0.15854,
+        "traj_rel_l2_vs_rk4_512": 0.023160609096725956
+      },
+      "SP-BF16-IR (M=16, 4+2)": {
+        "b1_latency_ms": 7.459,
+        "pop256_latency_ms": 137.211,
+        "sliced_wasserstein_2": 0.07384,
+        "rbf_mmd": 0.15843,
+        "traj_rel_l2_vs_rk4_512": 0.007597999943131939
+      }
+    }
+  },
+  "spatial_2d_glyph_dit_16x16": {
+    "model_params_m": 34.65,
+    "train_wall_s": 2.56,
+    "oracle_real_vs_real_swd": 0.06798,
+    "samplers": {
+      "Eager Euler-128 (FP32)": {
+        "b1_latency_ms": 100.715,
+        "psnr_vs_exact_ode_db": 55.69,
+        "edge_gradient_rel_l2": 0.002677924232557416,
+        "image_rel_l2_vs_exact_ode": 0.0034334904955719285,
+        "sliced_wasserstein_2": 0.34309
+      },
+      "CUDAGraph RK4-256 (FP32)": {
+        "b1_latency_ms": 174.867,
+        "psnr_vs_exact_ode_db": 123.02,
+        "edge_gradient_rel_l2": 1.81276095645444e-06,
+        "image_rel_l2_vs_exact_ode": 1.4756557155731083e-06,
+        "sliced_wasserstein_2": 0.34359
+      },
+      "CUDAGraph ParaDiGMS-128 (BF16)": {
+        "b1_latency_ms": 9.031,
+        "psnr_vs_exact_ode_db": 54.01,
+        "edge_gradient_rel_l2": 0.00545278238132596,
+        "image_rel_l2_vs_exact_ode": 0.004167372953342651,
+        "sliced_wasserstein_2": 0.34352
+      },
+      "PTX+CG ParaFlow-BF16 (5,0,0)": {
+        "b1_latency_ms": 2.696,
+        "psnr_vs_exact_ode_db": 50.73,
+        "edge_gradient_rel_l2": 0.007686012890189886,
+        "image_rel_l2_vs_exact_ode": 0.0060730942148100805,
+        "sliced_wasserstein_2": 0.34387
+      },
+      "PTX+CG CSP-BF16-IR (4,2,2)": {
+        "b1_latency_ms": 6.397,
+        "psnr_vs_exact_ode_db": 70.25,
+        "edge_gradient_rel_l2": 0.0008575976826250553,
+        "image_rel_l2_vs_exact_ode": 0.0006419702978888048,
+        "sliced_wasserstein_2": 0.34373
+      }
+    }
+  }
+}

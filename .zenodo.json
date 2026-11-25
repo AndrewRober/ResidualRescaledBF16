@@ -1,0 +1,23 @@
+{
+  "title": "Breaking the 7-Bit BF16 Mantissa Ceiling: O(eps^{2/3}) Residual-Rescaled Spectral Volterra-Newton Refinement for Continuous-Time Generative Flows",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-11-25",
+  "license": "MIT",
+  "description": "Reference implementation, raw NVIDIA SM_80/SM_120 PTX kernels, CUDAGraph solvers, reproducible benchmarks, and LaTeX manuscript for Central-Difference Scaled-Perturbation BF16 Spectral Volterra-Newton Iterative Refinement (CSP-BF16-IR) and z=sqrt(tau) high-noise log-SNR diffusion desingularization.",
+  "creators": [
+    {
+      "name": "Samy, Andrew Rober Fouad",
+      "affiliation": "BytesGlue"
+    }
+  ],
+  "keywords": [
+    "bfloat16",
+    "mixed-precision iterative refinement",
+    "diffusion models",
+    "flow matching",
+    "spectral Volterra integration",
+    "NVIDIA Tensor Cores",
+    "CUDA PTX"
+  ]
+}

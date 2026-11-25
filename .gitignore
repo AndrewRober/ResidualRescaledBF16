@@ -1,0 +1,34 @@
+# Model weight & array caches
+.cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.npz
+
+# Python bytecode & packaging
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.venv/
+venv/
+
+# LaTeX build intermediates (keep compiled PDFs tracked)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+
+# OS metadata
+.DS_Store
+Thumbs.db

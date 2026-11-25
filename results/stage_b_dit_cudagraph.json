@@ -1,0 +1,104 @@
+{
+  "stage": "Stage B \u2014 46.91M SwiGLU DiT PTX + CUDAGraph Trajectory Scaling",
+  "gpu_device": "NVIDIA GB10",
+  "pytorch_version": "2.11.0+cu130",
+  "reference": "FP64 1024-NFE Classical RK4 Exact Trajectory",
+  "peak_vram_mb": 797.73,
+  "fwd_vs_central_ablation": {
+    "PTX+CUDAGraph ParaFlow-BF16 (4,0,0)": {
+      "cuda_ms": 2.7613,
+      "rel_l2_err_vs_fp64": 0.0028461948525041296
+    },
+    "PTX+CUDAGraph Fwd SP-BF16-IR (4,3,1) [O(eps^1/2)]": {
+      "cuda_ms": 10.5077,
+      "rel_l2_err_vs_fp64": 9.630503609854378e-07
+    },
+    "PTX+CUDAGraph Central CSP-BF16-IR (4,2,2) [O(eps^2/3)]": {
+      "cuda_ms": 8.1612,
+      "rel_l2_err_vs_fp64": 1.162638363202284e-06
+    },
+    "PTX+CUDAGraph Central CSP-BF16-IR (4,3,1) [O(eps^2/3)]": {
+      "cuda_ms": 8.9415,
+      "rel_l2_err_vs_fp64": 4.977172972619595e-07
+    },
+    "PTX+CUDAGraph Central CSP-BF16-IR (4,3,2) [O(eps^2/3)]": {
+      "cuda_ms": 10.588,
+      "rel_l2_err_vs_fp64": 9.372931570369903e-08
+    }
+  },
+  "scaling_s64_to_s512": [
+    {
+      "S_steps": 64,
+      "eager_rk4_fp32_ms": 66.761,
+      "eager_euler_fp32_ms": 66.458,
+      "cudagraph_rk4_fp32_ms": 59.241,
+      "cudagraph_paradigms_bf16_ms": 4.964,
+      "ptx_cg_paraflow_bf16_ms": 2.761,
+      "ptx_cg_csp_bf16_ir_431_ms": 8.941,
+      "ptx_cg_csp_bf16_ir_432_ms": 10.588,
+      "speedup_csp432_vs_cudagraph_rk4_x": 5.595,
+      "speedup_csp432_vs_eager_rk4_x": 6.305,
+      "speedup_pf_bf16_vs_cudagraph_rk4_x": 21.454,
+      "rk4_fp32_rel_l2_err": 1.592495820612818e-07,
+      "euler_fp32_rel_l2_err": 0.004535204377543083,
+      "paradigms_bf16_rel_l2_err": 0.0021706233080298937,
+      "csp_bf16_ir_431_rel_l2_err": 4.977172972619595e-07,
+      "csp_bf16_ir_432_rel_l2_err": 9.372931570369903e-08
+    },
+    {
+      "S_steps": 128,
+      "eager_rk4_fp32_ms": 133.739,
+      "eager_euler_fp32_ms": 133.797,
+      "cudagraph_rk4_fp32_ms": 119.625,
+      "cudagraph_paradigms_bf16_ms": 9.546,
+      "ptx_cg_paraflow_bf16_ms": 2.761,
+      "ptx_cg_csp_bf16_ir_431_ms": 8.941,
+      "ptx_cg_csp_bf16_ir_432_ms": 10.588,
+      "speedup_csp432_vs_cudagraph_rk4_x": 11.298,
+      "speedup_csp432_vs_eager_rk4_x": 12.631,
+      "speedup_pf_bf16_vs_cudagraph_rk4_x": 43.322,
+      "rk4_fp32_rel_l2_err": 1.6009551675921956e-07,
+      "euler_fp32_rel_l2_err": 0.0022669924136422027,
+      "paradigms_bf16_rel_l2_err": 0.002122739500590533,
+      "csp_bf16_ir_431_rel_l2_err": 4.977172972619595e-07,
+      "csp_bf16_ir_432_rel_l2_err": 9.372931570369903e-08
+    },
+    {
+      "S_steps": 256,
+      "eager_rk4_fp32_ms": 268.302,
+      "eager_euler_fp32_ms": 266.84,
+      "cudagraph_rk4_fp32_ms": 233.526,
+      "cudagraph_paradigms_bf16_ms": 17.637,
+      "ptx_cg_paraflow_bf16_ms": 2.761,
+      "ptx_cg_csp_bf16_ir_431_ms": 8.941,
+      "ptx_cg_csp_bf16_ir_432_ms": 10.588,
+      "speedup_csp432_vs_cudagraph_rk4_x": 22.056,
+      "speedup_csp432_vs_eager_rk4_x": 25.34,
+      "speedup_pf_bf16_vs_cudagraph_rk4_x": 84.571,
+      "rk4_fp32_rel_l2_err": 2.0765122065377562e-07,
+      "euler_fp32_rel_l2_err": 0.0011333744480046069,
+      "paradigms_bf16_rel_l2_err": 0.00210770899057369,
+      "csp_bf16_ir_431_rel_l2_err": 4.977172972619595e-07,
+      "csp_bf16_ir_432_rel_l2_err": 9.372931570369903e-08
+    },
+    {
+      "S_steps": 512,
+      "eager_rk4_fp32_ms": 537.207,
+      "eager_euler_fp32_ms": 533.344,
+      "cudagraph_rk4_fp32_ms": 468.347,
+      "cudagraph_paradigms_bf16_ms": 34.653,
+      "ptx_cg_paraflow_bf16_ms": 2.761,
+      "ptx_cg_csp_bf16_ir_431_ms": 8.941,
+      "ptx_cg_csp_bf16_ir_432_ms": 10.588,
+      "speedup_csp432_vs_cudagraph_rk4_x": 44.234,
+      "speedup_csp432_vs_eager_rk4_x": 50.737,
+      "speedup_pf_bf16_vs_cudagraph_rk4_x": 169.611,
+      "rk4_fp32_rel_l2_err": 2.8475651705900795e-07,
+      "euler_fp32_rel_l2_err": 0.0005666193682607923,
+      "paradigms_bf16_rel_l2_err": 0.002101273105127426,
+      "csp_bf16_ir_431_rel_l2_err": 4.977172972619595e-07,
+      "csp_bf16_ir_432_rel_l2_err": 9.372931570369903e-08
+    }
+  ],
+  "wall_s": 20.22
+}

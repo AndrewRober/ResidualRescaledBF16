@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "residual-rescaled-bf16"
+version = "1.0.0"
+description = "Breaking the 7-Bit BF16 Mantissa Ceiling via Dynamic Residual-Rescaled Spectral Volterra-Newton Refinement (CSP-BF16-IR)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Andrew Rober Fouad Samy", email = "andrew.rober@bytesglue.com"}
+]
+keywords = [
+    "bfloat16",
+    "mixed-precision",
+    "iterative-refinement",
+    "diffusion-models",
+    "flow-matching",
+    "spectral-methods",
+    "volterra-integral-equations",
+    "cuda-ptx",
+    "tensor-cores"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "torch>=2.2.0",
+    "safetensors>=0.4.0",
+    "huggingface_hub>=0.20.0",
+    "matplotlib>=3.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AndrewRober/ResidualRescaledBF16"
+Repository = "https://github.com/AndrewRober/ResidualRescaledBF16"
+
+[tool.setuptools.packages.find]
+where = ["src"]
