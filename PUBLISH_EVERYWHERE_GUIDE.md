@@ -9,6 +9,7 @@ This guide contains live publication links, ready-to-paste metadata, checklists,
 - **GitHub Release (`v1.0.0`):** `https://github.com/AndrewRober/ResidualRescaledBF16/releases/tag/v1.0.0`
 - **Hugging Face Research Hub:** `https://huggingface.co/AndrewR123/ResidualRescaledBF16`
 - **LinkedIn Profile (`Publications`):** `https://www.linkedin.com/in/andrew-rober/details/publications/`
+- **LinkedIn Launch Post:** `https://www.linkedin.com/feed/update/urn:li:activity:7531256352837402625/`
 
 ---
 
